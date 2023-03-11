@@ -2,15 +2,11 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.json());
+
 // Define a route for the home page
 app.get('/', (req, res) => {
   res.send('Welcome to easyfind app!');
-});
-
-// Define a route for a specific user
-app.get('/users/:id', (req, res) => {
-  const userId = req.params.id;
-  res.send(`You are viewing user ${userId}`);
 });
 
 // Start the server
