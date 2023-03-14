@@ -1,4 +1,3 @@
-/* eslint-disable node/no-unsupported-features/es-syntax */
 const express = require('express');
 const categoryRouter = require('./routes/categoryRoute');
 
@@ -11,6 +10,6 @@ app.get('/', (req, res) => {
   res.send('Welcome to easyfind app!');
 });
 
-app.use('api/v1/category', categoryRouter);
+app.use('/api/v1/categories', categoryRouter);
 
 module.exports = app;
