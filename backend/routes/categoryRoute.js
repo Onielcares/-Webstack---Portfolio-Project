@@ -4,7 +4,12 @@ const categoryController = require('./../controllers/categoryControllers');
 const router = express.Router();
 router
   .route('/')
-  .post(categoryController.addProduct)
-  .get(categoryController.getProduct);
+  .post(categoryController.addCategory)
+  .get(categoryController.getCategory);
+
+router
+  .route('/:id')
+  .patch(categoryController.updateCategory)
+  .delete(categoryController.deleteCategory);
 
 module.exports = router;

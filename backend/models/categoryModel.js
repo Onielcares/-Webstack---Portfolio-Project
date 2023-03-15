@@ -6,7 +6,7 @@ const CategorySchema = new mongoose.Schema({
     required: true,
     unique: true
   },
-  parent: {
+  parentId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Category',
     default: null
