@@ -1,5 +1,6 @@
 const express = require('express');
 const categoryRouter = require('./routes/categoryRoute');
+const populateCategory = require('./controllers/populateCategory');
 
 const app = express();
 
