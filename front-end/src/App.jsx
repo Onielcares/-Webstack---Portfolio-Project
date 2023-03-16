@@ -1,9 +1,8 @@
-import "."
-function App() {
-  
+import "./App.scss"
 
+function App() {
   return (
-    <div className="text-orange peach" >
+    <div className="peach" >
       <p >This is our last alx project</p>
     </div>
   )
