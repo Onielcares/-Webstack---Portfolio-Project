@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line import/no-extraneous-dependencies, node/no-unpublished-require
 const axios = require('axios');
 
@@ -127,11 +129,11 @@ const populateCategory = () => {
   Promise.all(requests)
     .then(responses => {
       responses.forEach(response => {
-        console.log(response.data);
+        // console.log(response.data);
       });
     })
     .catch(error => {
-      console.error(error);
+      // console.error(error);
     });
 };
 

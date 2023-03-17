@@ -17,7 +17,7 @@ exports.addCategory = async (req, res) => {
     return res.status(500).json({
       status: 'error',
       code: 500,
-      message: 'Unabe to create categories'
+      message: 'Unabe to add categories'
     });
   }
 };
