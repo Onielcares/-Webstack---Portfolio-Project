@@ -1,13 +1,15 @@
 const mongoose = require('mongoose');
 
-const ProductSchema = new mongoose.Schema({
+const StoreSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   link: {
-    type: String,
-    required: true
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Store',
+    default: null
   },
   createdAt: {
     type: Date,
@@ -15,4 +17,5 @@ const ProductSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Product', ProductSchema);
+const Store = mongoose.model('Store', StoreSchema);
+module.exports = Store;
