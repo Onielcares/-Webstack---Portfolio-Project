@@ -1,4 +1,7 @@
 const express = require('express');
+const categoryRouter = require('./routes/categoryRoute');
+const productRouter = require('./routes/productRoute');
+// const populateCategory = require('./controllers/populateCategory');
 
 const app = express();
 
@@ -9,7 +12,7 @@ app.get('/', (req, res) => {
   res.send('Welcome to easyfind app!');
 });
 
-// Start the server
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
-});
+app.use('/api/v1/categories', categoryRouter);
+app.use('/api/v1/products', productRouter);
+
+module.exports = app;
