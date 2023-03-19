@@ -6,10 +6,9 @@ const StoreSchema = new mongoose.Schema({
     required: true,
     unique: true
   },
-  link: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Store',
-    default: null
+  url: {
+    type: String,
+    required: true
   },
   createdAt: {
     type: Date,
