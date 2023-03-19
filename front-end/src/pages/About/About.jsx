@@ -3,7 +3,7 @@ import About_img from "../../assets/about.svg"
 
 const About = () => {
   return (
-    <section className="grid">
+    <section className="grid about_section full_height">
         <div className="grid about_section_cont">
             <div className="flex about_sub_section " >
                 <h2 className="about_header-text">About Easy</h2>

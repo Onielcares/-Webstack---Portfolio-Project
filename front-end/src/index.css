@@ -15,16 +15,10 @@
 
 }
 
-.flex {
-  display: flex;
+.full_height {
+  height: calc(100vh - 64px)
 }
 
-.grid {
-  display: grid;
-}
-
-section {
-  min-height: 100vh;
-  background: var(--beige);
-  place-items: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
