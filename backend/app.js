@@ -1,6 +1,7 @@
 const express = require('express');
 const categoryRouter = require('./routes/categoryRoute');
 const productRouter = require('./routes/productRoute');
+const storeRouter = require('./routes/storeRoute');
 // const populateCategory = require('./controllers/populateCategory');
 
 const app = express();
@@ -14,5 +15,6 @@ app.get('/', (req, res) => {
 
 app.use('/api/v1/categories', categoryRouter);
 app.use('/api/v1/products', productRouter);
+app.use('/api/v1/stores', storeRouter);
 
 module.exports = app;

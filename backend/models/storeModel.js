@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 
-const ProductSchema = new mongoose.Schema({
+const StoreSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
-  link: {
+  url: {
     type: String,
     required: true
   },
@@ -15,4 +16,5 @@ const ProductSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Product', ProductSchema);
+const Store = mongoose.model('Store', StoreSchema);
+module.exports = Store;
