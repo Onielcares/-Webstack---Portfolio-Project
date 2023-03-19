@@ -2,18 +2,18 @@ const Product = require('./../models/productModel');
 
 exports.addProduct = async (req, res) => {
   try {
-    const { name, category, store } = req.body;
+    const { name, category, stores } = req.body;
     const product = await Product.create({
       name,
       category,
-      store
+      stores
     });
     return res.status(201).json({
       status: 'Success',
       code: 201,
       product: product.name,
       category: product.category,
-      store: product.store
+      stores: product.stores
     });
   } catch {
     return res.status(500).json({
@@ -44,8 +44,8 @@ exports.getProduct = async (req, res) => {
 
 exports.updateProduct = async (req, res) => {
   const { id } = req.params;
-  const { name, category, store } = req.body;
-  const update = { name, category, store };
+  const { name, category, stores } = req.body;
+  const update = { name, category, stores };
   const opts = { new: true, runValidators: true };
   try {
     const product = await Product.findByIdAndUpdate(id, update, opts);
@@ -79,6 +79,46 @@ exports.deleteProduct = async (req, res) => {
       status: 'error',
       code: 500,
       message: 'Unable to delete product!'
+    });
+  }
+};
+
+exports.searchProduct = async (req, res) => {
+  const { name } = req.body;
+  try {
+    const regex = new RegExp(name, 'i');
+    const searchProducts = await Product.find({ name: { $regex: regex } })
+      .populate('category')
+      .populate('stores');
+
+    if (!searchProducts.length) {
+      return res.status(404).json({
+        status: 'error',
+        code: 404,
+        message: 'Product not found'
+      });
+    }
+
+    // Map the product data to an array containing the category name and store names and links for each product
+    const data = searchProducts.map(product => ({
+      product: product.name,
+      category: product.category.name,
+      stores: product.stores.map(store => ({
+        name: store.name,
+        url: store.url
+      }))
+    }));
+
+    return res.status(200).json({
+      status: 'Success',
+      code: 200,
+      data
+    });
+  } catch {
+    return res.status(500).json({
+      status: 'error',
+      code: 500,
+      message: 'Unable to search product!'
     });
   }
 };
