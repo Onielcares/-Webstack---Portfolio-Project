@@ -82,3 +82,44 @@ exports.deleteProduct = async (req, res) => {
     });
   }
 };
+
+exports.searchProduct = async (req, res) => {
+  const { name } = req.body;
+  try {
+    const regex = new RegExp(name, 'i');
+    const searchProducts = await Product.find({ name: { $regex: regex } });
+
+    if (!searchProducts.length) {
+      return res.status(404).json({
+        status: 'error',
+        code: 404,
+        message: 'Product not found'
+      });
+    }
+    const products = await searchProducts
+      .populate('category', 'name')
+      .populate('stores', 'name link');
+
+    // Map the product data to an array containing the category name and store names and links for each product
+    const data = products.map(product => ({
+      category: product.category.name,
+      stores: product.stores.map(store => ({
+        name: store.name,
+        link: store.link
+      }))
+    }));
+
+    res.json({ data });
+    return res.status(200).json({
+      status: 'Success',
+      code: 200,
+      data
+    });
+  } catch {
+    return res.status(500).json({
+      status: 'error',
+      code: 500,
+      message: 'Unable to search product!'
+    });
+  }
+};
