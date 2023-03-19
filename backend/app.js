@@ -1,12 +1,14 @@
 const express = require('express');
+const cors = require('cors');
 const categoryRouter = require('./routes/categoryRoute');
 const productRouter = require('./routes/productRoute');
 const storeRouter = require('./routes/storeRoute');
-// const populateCategory = require('./controllers/populateCategory');
+// const populateProduct = require('./controllers/tempData');
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 // Define a route for the home page
 app.get('/', (req, res) => {

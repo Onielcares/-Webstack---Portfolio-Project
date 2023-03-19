@@ -135,14 +135,15 @@ exports.getCategoriesWithChildren = async (req, res) => {
 exports.searchProductInCategory = async (req, res) => {
   const { name } = req.body;
   const { id } = req.params;
-  console.log(name, id);
+
   try {
     const regex = new RegExp(name, 'i');
-    console.log(regex);
     const searchProducts = await Product.find({
       name: { $regex: regex },
       category: id
-    }).populate('category');
+    })
+      .populate('category')
+      .populate('stores');
 
     if (!searchProducts.length) {
       return res.status(404).json({
@@ -151,21 +152,16 @@ exports.searchProductInCategory = async (req, res) => {
         message: 'Product not found'
       });
     }
-    console.log(searchProducts);
-    // const products = await searchProducts.populate('category');
-      // .populate('stores', 'name link');
 
-    // console.log(products);
-    // Map the product data to an array containing the category name and store names and links for each product
     const data = searchProducts.map(product => ({
-      category: product.category.name
-      // stores: product.stores.map(store => ({
-      //   name: store.name,
-      //   link: store.link
-      // }))
+      product: product.name,
+      category: product.category.name,
+      stores: product.stores.map(store => ({
+        name: store.name,
+        url: store.url
+      }))
     }));
 
-    // res.json({ data });
     return res.status(200).json({
       status: 'Success',
       code: 200,
