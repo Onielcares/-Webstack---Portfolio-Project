@@ -1,9 +1,11 @@
 import "./App.scss"
+import Navbar from "./component/navbar/Navbar"
 
 function App() {
   return (
     <div className="peach" >
-      <p >This is our last alx project</p>
+      <Navbar />
+      H
     </div>
   )
 }
