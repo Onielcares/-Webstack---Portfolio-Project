@@ -9,7 +9,9 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       'black': '#000',
+      'white': '#fff',
       'purple': '#3F1859',
+      'beige': '#FFECB9',
       },
   },
   plugins: [],
