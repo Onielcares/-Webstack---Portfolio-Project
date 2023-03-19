@@ -1,0 +1,27 @@
+.nav_container {
+    background: var(--purple);
+    color: var(--white);
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.nav-ul {
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-li {
+    padding: .3rem 1rem;
+}
+
+.category_btn {
+    background-color: var(--beige);
+    border-radius: 20px;
+    color: var(--purple)
+}
