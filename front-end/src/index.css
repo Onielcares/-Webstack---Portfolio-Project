@@ -18,3 +18,13 @@
 .flex {
   display: flex;
 }
+
+.grid {
+  display: grid;
+}
+
+section {
+  min-height: 100vh;
+  background: var(--beige);
+  place-items: center;
+}

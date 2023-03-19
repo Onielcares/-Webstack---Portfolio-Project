@@ -6,8 +6,8 @@ const Navbar = () => {
       <nav className="flex nav_container">
         <h1 className="logo">EASY SHOP</h1>
         <ul className="flex nav-ul">
-          <li className="nav-li">About</li>
-          <li className="nav-li category_btn">Categories</li>
+          <li className="nav-link">About</li>
+          <li className="nav-link category_btn">Categories</li>
         </ul>
       </nav>
     </header>
