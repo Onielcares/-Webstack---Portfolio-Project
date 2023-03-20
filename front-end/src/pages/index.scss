@@ -1,0 +1,12 @@
+.landingImg{
+    background-image: url('../assets/landingBackground.png'), linear-gradient( #FFECB9 55%, #3F1859 45%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: 768px){
+    // .landingImg{
+    //     background-image: url('../assets/landingBackground.png'), linear-gradient( #FFECB9 10%, #3F1859 90%);
+    // }
+}
