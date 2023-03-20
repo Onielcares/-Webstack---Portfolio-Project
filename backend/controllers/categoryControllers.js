@@ -85,9 +85,14 @@ exports.deleteCategory = async (req, res) => {
 exports.getCategoriesWithoutParent = async (req, res) => {
   try {
     const categories = await Category.find({ parentId: null });
-    res.json({ categories });
+
+    return res.status(200).json({
+      status: 'Success',
+      code: 201,
+      data: categories
+    });
   } catch (error) {
-    res.status(500).json({
+    return res.status(500).json({
       status: 'error',
       code: 500,
       message: 'Server error'
