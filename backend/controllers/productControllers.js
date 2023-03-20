@@ -2,17 +2,17 @@ const Product = require('./../models/productModel');
 
 exports.addProduct = async (req, res) => {
   try {
-    const { name, category, stores } = req.body;
+    const { name, categories, stores } = req.body;
     const product = await Product.create({
       name,
-      category,
+      categories,
       stores
     });
     return res.status(201).json({
       status: 'Success',
       code: 201,
       product: product.name,
-      category: product.category,
+      categories: product.categories,
       stores: product.stores
     });
   } catch {
@@ -44,8 +44,8 @@ exports.getProduct = async (req, res) => {
 
 exports.updateProduct = async (req, res) => {
   const { id } = req.params;
-  const { name, category, stores } = req.body;
-  const update = { name, category, stores };
+  const { name, categories, stores } = req.body;
+  const update = { name, categories, stores };
   const opts = { new: true, runValidators: true };
   try {
     const product = await Product.findByIdAndUpdate(id, update, opts);
@@ -102,7 +102,9 @@ exports.searchProduct = async (req, res) => {
     // Map the product data to an array containing the category name and store names and links for each product
     const data = searchProducts.map(product => ({
       product: product.name,
-      category: product.category.name,
+      categories: product.categories.map(category => ({
+        name: category.name
+      })),
       stores: product.stores.map(store => ({
         name: store.name,
         url: store.url
