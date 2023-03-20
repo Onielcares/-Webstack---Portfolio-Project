@@ -5,7 +5,6 @@
 This API allows you manage a pool of products, categories, and stores for a EasyShop App.
 
 <br/>
-<br/>
 
 ## Getting Started
 This API is currently  deployed to a remote server
@@ -13,12 +12,8 @@ This API is currently  deployed to a remote server
 **BASE URL**: `https://findmystore.onrender.com`
 
 <br/>
-<br/>
 
 ## Error Handling
-
-
-
 
 ### Response Object
 
@@ -39,8 +34,8 @@ Errors are returned as JSON in the following format:
 `code` - Status code of the error that occurred. <br>
 `message` - Accompanying error message.
 
+<br/>
+
 ## Endpoint Library
 
-<br/>
-<br/>
 
