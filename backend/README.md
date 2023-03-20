@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This API allows you manage a pool of products and categories for a EasyShop App.
+This API allows you manage a pool of products, categories, and stores for a EasyShop App.
 
 <br/>
 <br/>
@@ -17,7 +17,8 @@ This API is currently  deployed to a remote server
 
 ## Error Handling
 
-<br/>
+
+
 
 ### Response Object
 
@@ -30,6 +31,7 @@ Errors are returned as JSON in the following format:
   message: 'The requested resource was not found'
 }
 ```
+<br/>
 
 ### Response Keys
 
