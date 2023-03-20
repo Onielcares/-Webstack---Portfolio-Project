@@ -7,6 +7,8 @@ router
   .post(productController.addProduct)
   .get(productController.getProduct);
 
+router.post('/search', productController.searchProduct);
+
 router
   .route('/:id')
   .patch(productController.updateProduct)
