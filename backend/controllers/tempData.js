@@ -166,7 +166,7 @@ const populateProduct = () => {
     "Asus Vivobook Mini E203n Intel Celeron 4GB RAM 128GB EMMC 11.6'' - Wins 10 "
   ];
 
-  computing2 = [
+  const computing2 = [
     "Asus Intel Celeron 4GB RAM 128GB 11.6'Wins 10 Mini Laptop White",
     'DELL Latitude 3180 Intel Celeron 128GB SSD 4GB RAM Wins 10pro + Bag',
     'DELL Latitude 3180 Intel Celeron 128GB SSD 4GB RAM Wins 10pro + Bag',
@@ -269,13 +269,30 @@ const populateProduct = () => {
     "Men's Sports Running Shoes -White"
   ];
 
-  const requests = fashion.map(item => {
+  // const requests = fashion.map(item => {
+  //   return axios.post('http://127.0.0.1:3000/api/v1/products', {
+  //     name: item,
+  //     categories: ['6411acf663ee804bfda3eb0b', '64105684ec060519d770570e'],
+  //     stores: [
+  //       '6416d0331e2c9681fa030161',
+  //       '64173c1d63cc591a769380ea',
+  //       '6416e5ed1d7387e46e76e8f4'
+  //     ]
+  //   });
+  // });
+
+  const requests = computing2.map(item => {
     return axios.post('http://127.0.0.1:3000/api/v1/products', {
       name: item,
-      category: '6411acf663ee804bfda3eb0b',
-      stores: ['6416d0331e2c9681fa030161', '64173c1d63cc591a769380ea', '6416e5ed1d7387e46e76e8f4']
+      categories: ['64101c51800e5bfc6f641d23', '6411ac3163ee804bfda3eaeb'],
+      stores: [
+        '6416d0331e2c9681fa030161',
+        '6416e5ed1d7387e46e76e8f4',
+        '641739da63cc591a769380df'
+      ]
     });
   });
+
   Promise.all(requests)
     .then(responses => {
       responses.forEach(response => {
@@ -289,5 +306,4 @@ const populateProduct = () => {
 
 populateProduct();
 
-module.exports = populateProduct;
- */
+module.exports = populateProduct; */
