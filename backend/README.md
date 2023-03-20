@@ -40,9 +40,9 @@ Errors are returned as JSON in the following format:
 
 ### Categories
 
-#### `GET /categories`
+#### `GET /api/v1/categories/base`
 
-This fetches all the categories including parent/base and children categories.
+This fetches all the parent/base categories.
 
 #### Query Parameters
 
@@ -54,7 +54,7 @@ This endpoint doesn't require a request body.
 
 #### Sample Request
 
-`curl https://findmystore.onrender.com/api/v1/categories`
+`curl https://findmystore.onrender.com/api/v1/categories/base`
 
 #### Sample Response
 
