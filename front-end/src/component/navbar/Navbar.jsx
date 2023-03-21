@@ -1,7 +1,7 @@
 import React from 'react';	
 import "./navbar.css"
 import logo from '../../assets/logo.png'
-import { Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 
 const Navbar = () => {
   return (
@@ -12,8 +12,8 @@ const Navbar = () => {
           <h1 className="logo">EASY SHOP</h1>
         </div></Link>
         <ul className="flex flex-wrap justify-center sm:justify-start nav-ul">
-          <Link to='/about'><li className="nav-link">About</li></Link>
-          <Link to='/categories'><li className="nav-link category_btn">Categories</li></Link>
+          <NavLink to='/about'><li className="nav-link">About</li></NavLink>
+          <NavLink to='/categories'><li className="nav-link ">Categories</li></NavLink>
         </ul>
       </nav>
     </header>

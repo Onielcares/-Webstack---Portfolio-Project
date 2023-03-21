@@ -1,5 +1,5 @@
 import "./about.css"
-import About_img from "../../assets/about.svg"
+import About_img from "../../assets/about.svg" /*this is because the image here is a comment*/
 
 const About = () => {
   return (

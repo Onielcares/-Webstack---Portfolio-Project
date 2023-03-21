@@ -39,3 +39,18 @@
     align-items: center;
     gap: 10px;
 }
+
+/*media queries*/
+@media(max-width: 500px) {
+    .about_section_cont {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        height: max-content;
+        text-align: center;
+        gap: 40px;
+    }
+    .protractor {
+        justify-content: center;
+    }
+    
+}
