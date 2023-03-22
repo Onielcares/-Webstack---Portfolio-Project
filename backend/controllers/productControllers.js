@@ -119,11 +119,15 @@ exports.searchProduct = async (req, res) => {
 
     // Map the product data to an array containing the category name and store names and links for each product
     const data = searchProducts.map(product => ({
+      _id: product._id,
       product: product.name,
+      imageUrl: product.imageUrl,
       categories: product.categories.map(category => ({
+        _id: category._id,
         name: category.name
       })),
       stores: product.stores.map(store => ({
+        _id: store._id,
         name: store.name,
         url: store.url
       }))
