@@ -32,7 +32,9 @@ const LandingPage = () => {
             goodbye to the hassle of moving from store to store and hello to a
             world of convenience and choice.
           </p>
-          <p className="font-medium text-purple text-right text-sm md:text-lg italic">...Shop Easy – shop from the comfort of your own home.</p>
+          <p className="font-medium text-purple text-right text-sm md:text-lg italic">
+            ...Shop Easy – shop from the comfort of your own home.
+          </p>
         </div>
       </section>
 
@@ -54,24 +56,31 @@ const LandingPage = () => {
               .map((item, idx) => (
                 <Card
                   key={idx}
-                  product={item.name}
-                  alt={item.name}
-                  category={item.categories}
-                  store={item.stores}
+                  product={item.product}
+                  alt={item.product}
+                  src={item.imageUrl}
+                  category={item.categories[1].name}
+                  store={item.stores.map((item, idx) => (
+                    <p key={idx}>
+                      <a href={item.url} target="_blank">
+                        | {item.name}
+                      </a>
+                    </p>
+                  ))}
                 />
               ))}
         </div>
       </section>
 
       <footer className="">
-      <div className="flex flex-col justify-center items-center gap-5 pt-3 pb-10 md:max-w-4xl m-auto mt-14">
+        <div className="flex flex-col justify-center items-center gap-5 pt-3 pb-10 md:max-w-4xl m-auto mt-14">
           <div className="text-center">
             <h2 className="font-medium text-2xl md:text-4xl text-white">
               Testimonials
             </h2>
             <p className="mt-2 mb-14 text-white">
-              Don't just take our word for it, here are some testimonials
-              from our satisfied customers.
+              Don't just take our word for it, here are some testimonials from
+              our satisfied customers.
             </p>
           </div>
           <div className="flex flex-col gap-10 ">
@@ -81,16 +90,16 @@ const LandingPage = () => {
               being able to find everything I need in one place is a lifesaver.
               I love the variety of options available, and the platform is so
               easy to use."
-              <p className="text-right italic text-sm md:text-lg">- Miracle</p>
             </p>
+            <p className="text-right italic text-sm md:text-lg">- Miracle</p>
             <p className="bg-white rounded-3xl text-purple text-lg md:text-2xl p-3">
               "Shop Easy is the perfect solution for anyone who wants to shop
               from the comfort of their own home. The platform is user-friendly,
               and the selection of products is fantastic. I've found everything
               I need on Shop Easy, and I've recommended it to all of my
               friends."
-              <p className="text-right italic text-sm md:text-lg">- John</p>
             </p>
+            <p className="text-right italic text-sm md:text-lg">- John</p>
           </div>
         </div>
         {/* <div className="flex flex-col justify-center items-center gap-5 pt-3 pb-10">

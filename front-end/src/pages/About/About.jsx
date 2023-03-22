@@ -79,16 +79,16 @@ const About = () => {
             <p className="font-medium md:text-lg">Peace Oluchi</p>
             <p>Frontend developer</p>
             <div className="flex gap-5">
-              <a href="https://github.com/Rubylena" target="_blank">
+              <a href="https://github.com/Peacebern" target="_blank">
                 <i class="fa-brands fa-github"></i>
               </a>
               <a
-                href="https://www.linkedin.com/in/grace-effiong/"
+                href="https://www.linkedin.com/in/peace-oluchi-bernard-6b8811227"
                 target="_blank"
               >
                 <i class="fa-brands fa-linkedin"></i>
               </a>
-              <a href="https://twitter.com/Grace_ffiong" target="_blank">
+              <a href="https://twitter.com/@sugarme45784473" target="_blank">
                 <i class="fa-brands fa-twitter"></i>
               </a>
             </div>
