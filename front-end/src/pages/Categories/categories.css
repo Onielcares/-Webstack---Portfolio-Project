@@ -1,8 +1,10 @@
 .category_container {
-    background: var(--beige); /*url(../../assets/CategoriesPage.png) you can also put in the background image in this element*/
+    background: var(--beige);
+    /*url(../../assets/CategoriesPage.png) you can also put in the background image in this element*/
     min-height: 90vh;
     background-image: url(../../assets/CategoriesPage.png);
-    background-position-y: 100%; /* this implies that the image will be placed from top to buttom vertically*/
+    background-position-y: 100%;
+    /* this implies that the image will be placed from top to buttom vertically*/
     background-repeat: no-repeat;
     background-size: 20%;
 }
@@ -10,33 +12,37 @@
 .category_section1 {
     width: 80%;
     margin: 2rem auto;
-    display: grid; /* grid by defaults displays everything in block*/
+    display: grid;
+    /* grid by defaults displays everything in block*/
     gap: 10px;
 }
+
 .category_nav {
-    gap: 50px;
+    gap: 40px;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--black);
     color: var(--white);
     width: 100%;
     padding: 1.5rem 2.5rem;
     border-radius: 20px;
 }
+
 .category_header {
     font-size: 30px;
+    font-weight: 700;
 }
+
 .category_links {
-    gap: 40px;
-    grid-row-gap: 20px;
     flex-wrap: wrap;
-    width: 100%;
+    gap: 10px;
     justify-content: center;
 }
 
 .category_link {
     background: var(--beige);
     color: var(--purple);
-    padding: .2rem 1.5rem;
+    padding: .2rem .9rem;
     border-radius: 20px;
 }
 
@@ -52,15 +58,13 @@
 }
 
 .search_btn {
-    padding: .3rem  1rem;
+    padding: .3rem 1rem;
     background: var(--purple);
     color: var(--white);
     border-radius: 0 10px 10px 0;
 }
 
 .product_c {
-    width: 80%;
-    margin: auto;
     padding: 1rem 0 0 10rem;
     flex-wrap: wrap;
     gap: 20px;
@@ -71,6 +75,7 @@
     .product_c {
         padding: 2rem;
     }
+
     .category_nav {
         flex-direction: column;
         justify-content: center;
@@ -81,6 +86,6 @@
 @media (max-width : 500px) {
     .product_c {
         width: 100%;
-        
+
     }
 }

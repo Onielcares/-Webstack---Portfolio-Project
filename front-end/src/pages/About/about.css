@@ -4,11 +4,14 @@
 }
 
 .about_section_cont {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 60% 40%;
+    /* grid-template-columns: repeat(2, 1fr); */
     /* spliting the section into two equal parts or 1fr 1fr here 2 means it repeats twice it can be 3 times of one fraction(1fr)*/
     place-items: center;
     max-width: 1200px;
     padding: 1.5rem;
+    gap: 100px;
+    text-align: justify;
 }
 
 .about_sub_section {
