@@ -1,0 +1,39 @@
+.custom_animate_in {
+  animation: fadeProductContentIn 1s ease-in-out forwards;
+}
+.custom_animate_out {
+  visibility: hidden;
+  animation: fadeProductContentOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeProductContentIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeProductContentOut {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
