@@ -147,7 +147,7 @@ exports.searchProductInCategory = async (req, res) => {
       name: { $regex: regex },
       category: id
     })
-      .populate('category')
+      .populate('categories')
       .populate('stores');
 
     if (!searchProducts.length) {

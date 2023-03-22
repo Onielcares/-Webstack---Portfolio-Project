@@ -3,7 +3,6 @@ const cors = require('cors');
 const categoryRouter = require('./routes/categoryRoute');
 const productRouter = require('./routes/productRoute');
 const storeRouter = require('./routes/storeRoute');
-// const populateProduct = require('./controllers/tempData');
 
 const app = express();
 

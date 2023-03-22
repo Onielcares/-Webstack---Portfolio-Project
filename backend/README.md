@@ -435,3 +435,633 @@ This endpoint doesn't require a request body.
     ]
 }
 ```
+
+
+### Search
+
+#### `POST /api/v1/products/search`
+
+This search for a product in the database and return every products that match the search keywords
+
+#### Query Parameters
+
+This endpoint takes in no query parameter.
+
+#### Request Body
+
+`name` : name of the product to search
+
+#### Sample Request
+
+`curl -X POST -H "Content-Type: application/json" -d '{ "name": "hp"}' https://findmystore.onrender.com/api/v1/products/`
+
+#### Sample Response
+
+```
+{
+    "status": "Success",
+    "code": 200,
+    "data": [
+        {
+            "product": "Hp Stream 11 Pro- Intel Celeron- Education Edition - 4GB RAM - 64GB HDD Windows 10 Pro+ BAG₦ 99,000₦ 170,00042%offers from4.1 out of 5(26)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp 15 AMD - 12GB RAM 1TB HDD Windows 10 Pro- 2.3GHz To 3.2GHz₦ 252,000₦ 255,5001%4.7 out of 5(29)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp CHROMEBOOK, INTEL CELERON, 4GB RAM,32GB EMMC WINS 10+BAG₦ 87,000",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Notebook 11 - 256GB SSD Intel PENTIUM Q/C- TOUCH 4GB RAM Windows 10 Pro+ USB Light For Keyboard₦ 190,0004 out of 5(1)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp EliteBook X360 1040 G8 Core I7 512GB SSD 16GB RAM 14\" TOUCHSCREEN WIN10 Pro BACKLIT Keyboard₦ 1,000,000₦ 1,658,00040%",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Stream 11 Intel Celeron D/C  4GB RAM- 64GB HDD WIN 10+ BAG₦ 99,000₦ 150,75034%4.5 out of 5(6)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp ProBook 11 X360- TOUCH Intel Celeron 128GB 4GB RAM WIN10 Pro₦ 140,000₦ 175,00020%4.8 out of 5(4)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp ProBook 11 X360- 128GB SSD TOUCHSCREEN Intel PENTIUM -4GB RAM WIN10 Pro +32GB FLASH₦ 174,000₦ 175,0001%offers from4.5 out of 5(23)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Stream 11 Intel Celeron D/C  4GB RAM- 64GB HDD WIN 10+ USD LED LIGHT & POUCH₦ 129,000₦ 284,00055%",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Notebook 15 AMD Athlon Gold 16GB RAM 2.4GHz To 3.3GHz 1TB HDD Windows 10 Pro+USB Light For Keyboard₦ 210,000₦ 250,00016%5 out of 5(3)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Laptop 15 Inch AMD RYZEN 3- 12GB RAM - 2.6GHz - 3.5GHz -1TB HDD Windows 11+ USB Light For Keyboard₦ 247,000₦ 388,00036%offers from3.6 out of 5(14)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Laptop 15 Inch AMD RYZEN 3- 16GB RAM - 2.6GHz - 3.5GHz -1TB HDD Windows 10+ HP MOUSE₦ 260,000",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Notebook 15 AMD Athlon Gold 8GB RAM 2.4GHz To 3.3GHz 1TB HDD Windows 11₦ 190,000₦ 259,00027%4.5 out of 5(18)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp ProBook 11 X360- 512GB SSD TOUCHSCREEN Intel PENTIUM Q/C  4GB RAM WIN10 Pro+ USB Light For Keyboard₦ 155,990₦ 180,00013%",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Stream 11 Intel Celeron D/C  4GB RAM- 64GB HDD WIN 10+ BAG₦ 99,000₦ 170,00042%4 out of 5(2)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Notebook 15 AMD Athlon Gold 16GB RAM 2.4GHz To 3.3GHz 1TB HDD Windows 11 + HP MOUSE₦ 210,000₦ 320,00034%",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp ProBook 11 X360- 512GB SSD  TOUCHSCREEN Intel PENTIUM 4GB RAM WIN10 Pro RED + 32GB FLASH₦ 169,000₦ 238,00029%",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Notebook 15 AMD Athlon Gold 12GB RAM 2.4GHz To 3.3GHz 1TB HDD Windows 10 Pro+USB Light For Keyboard₦ 200,000₦ 260,00023%5 out of 5(1)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp 15 Intel Celeron N4020 8GB RAM, 1TB HDD, Wins 10 + Bag₦ 188,000₦ 233,00019%",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Notebook 15 AMD Athlon Gold 8GB RAM 2.4GHz To 3.3GHz 1TB HDD Windows 10 Pro+USB Light For Keyboard₦ 190,000₦ 195,0003%4.3 out of 5(3)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Stream 14 Intel Celeron - 64GB HDD- 4GB RAM Windows 10+ 32GB Flash₦ 129,000₦ 160,00019%",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Pavilion 15 AMD RYZEN 3 -Keyboard Light- 2.6GHz - 3.5GHz - 8GB RAM- 1TB HDD Windows 10 + Mouse₦ 250,000₦ 300,00017%5 out of 5(2)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Notebook15 Intel Core I3 Touchscreen 16GB RAM/1TB HDD Win 10₦ 310,000₦ 390,00021%5 out of 5(1)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        },
+        {
+            "product": "Hp Laptop 15- AMD RYZEN 3-Keyboard Light -12GB RAM/1TB HDD 2.6GHz - 3.5GHz- Windows 11₦ 263,000₦ 265,2001%4.8 out of 5(5)",
+            "categories": [
+                {
+                    "name": "Computing"
+                },
+                {
+                    "name": "Computers"
+                }
+            ],
+            "stores": [
+                {
+                    "name": "Jumia",
+                    "url": "https://www.jumia.com.ng"
+                },
+                {
+                    "name": "Konga",
+                    "url": "https://www.konga.com"
+                },
+                {
+                    "name": "Kara",
+                    "url": "https://kara.com.ng"
+                }
+            ]
+        }
+    ]
+}
+```

@@ -2,18 +2,20 @@ const Product = require('./../models/productModel');
 
 exports.addProduct = async (req, res) => {
   try {
-    const { name, categories, stores } = req.body;
+    const { name, categories, stores, imageUrl } = req.body;
     const product = await Product.create({
       name,
       categories,
-      stores
+      stores,
+      imageUrl
     });
     return res.status(201).json({
       status: 'Success',
       code: 201,
       product: product.name,
       categories: product.categories,
-      stores: product.stores
+      stores: product.stores,
+      imageUrl: product.imageUrl
     });
   } catch {
     return res.status(500).json({
@@ -26,12 +28,28 @@ exports.addProduct = async (req, res) => {
 
 exports.getProduct = async (req, res) => {
   try {
-    const product = await Product.find();
+    const products = await Product.find({})
+      .populate('categories')
+      .populate('stores');
 
+    const data = products.map(product => ({
+      _id: product._id,
+      product: product.name,
+      imageUrl: product.imageUrl,
+      categories: product.categories.map(category => ({
+        _id: category._id,
+        name: category.name
+      })),
+      stores: product.stores.map(store => ({
+        _id: store._id,
+        name: store.name,
+        url: store.url
+      }))
+    }));
     return res.status(200).json({
       status: 'Success',
       code: 200,
-      data: product
+      data
     });
   } catch {
     return res.status(500).json({
@@ -88,7 +106,7 @@ exports.searchProduct = async (req, res) => {
   try {
     const regex = new RegExp(name, 'i');
     const searchProducts = await Product.find({ name: { $regex: regex } })
-      .populate('category')
+      .populate('categories')
       .populate('stores');
 
     if (!searchProducts.length) {
