@@ -56,7 +56,7 @@ const Categories = () => {
         </form>
       </div>
 
-      <div className="flex flex-col gap-6 justify-center items-center w-[80%] m-auto">
+      <div className="flex flex-col gap-6 justify-center 2xl:w-[80%] items-center m-auto">
         <div className="flex product_c">
           {products &&
             [...products]
@@ -73,7 +73,7 @@ const Categories = () => {
               ))}
         </div>
         <p
-          className="text-xl text-purple font-black pl-40 cursor-pointer pb-10"
+          className="text-xl text-purple font-black md:pl-40 cursor-pointer pb-10"
           onClick={() => setShow(!show)}
         >
           {show ? "Show less" : "Show more"}
