@@ -1,7 +1,7 @@
 import React from 'react';	
 import "./navbar.css"
 import logo from '../../assets/logo.png'
-import { Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 
 const Navbar = () => {
   return (
@@ -11,9 +11,10 @@ const Navbar = () => {
           <img src={logo} alt='project logo' className='w-10' />
           <h1 className="logo">EASY SHOP</h1>
         </div></Link>
-        <ul className="flex flex-wrap justify-center sm:justify-start nav-ul">
-          <Link to='/about'><li className="nav-link">About</li></Link>
-          <Link to='/categories'><li className="nav-link category_btn">Categories</li></Link>
+        <ul className="flex flex-wrap justify-center font-medium sm:justify-start nav-ul">
+          <NavLink to='/'><li className="nav-link">Home</li></NavLink>
+          <NavLink to='/about'><li className="nav-link">About</li></NavLink>
+          <NavLink to='/categories'><li className="nav-link ">Categories</li></NavLink>
         </ul>
       </nav>
     </header>
