@@ -14,7 +14,7 @@ export default function Card(props) {
           className="w-full h-full rounded-t-lg"
         />
       </div>
-      <div className="bg-white rounded-b-lg px-4 md:p-2 h-44 flex flex-col gap-2 justify-center items-center">
+      <div className="bg-white rounded-b-lg px-4 md:p-2 h-56 flex flex-col gap-2 justify-center items-center">
         <p className="text-lg md:text-xl font-medium">{props.product}</p>
         <p
           className="text-xs underline text-purple cursor-pointer"

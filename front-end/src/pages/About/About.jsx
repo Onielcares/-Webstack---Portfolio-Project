@@ -32,8 +32,86 @@ const About = () => {
             <p>Lorem, ipsum.</p>
           </div>
         </div>
-        <div className="about_sub_section2 ">
+        <div className="hidden md:block ">
           <img src={About_img} alt="" className="about_img" />
+        </div>
+      </div>
+
+      <div className="flex flex-col justify-center items-center gap-5 ">
+        <h2 className="text-lg md:text-2xl">Developers</h2>
+        <div className="flex gap-5 flex-wrap justify-center pb-8">
+          <div className="bg-white rounded-lg p-2 flex flex-col justify-center items-center">
+            <p className="font-medium md:text-lg">Grace Effiong</p>
+            <p>Software developer</p>
+            <div className="flex gap-5">
+              <a href="https://github.com/Rubylena" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/grace-effiong"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://twitter.com/Grace_ffiong" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg p-2 flex flex-col justify-center items-center">
+            <p className="font-medium md:text-lg">Opeyemi Odebode</p>
+            <p>Backend developer</p>
+            <div className="flex gap-5">
+              <a href="https://github.com/surahj" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/surahj" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://twitter.com/odebodeopeyemi" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg p-2 flex flex-col justify-center items-center">
+            <p className="font-medium md:text-lg">Peace Oluchi</p>
+            <p>Frontend developer</p>
+            <div className="flex gap-5">
+              <a href="https://github.com/Rubylena" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/grace-effiong/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://twitter.com/Grace_ffiong" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg p-2 flex flex-col justify-center items-center">
+            <p className="font-medium md:text-lg">Nathaniel Dehinbo</p>
+            <p>Backend developer</p>
+            <div className="flex gap-5">
+              <a href="https://github.com/Onielcares" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nathaniel-dehinbo"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://twitter.com/ONielCares" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
