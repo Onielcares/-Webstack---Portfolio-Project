@@ -5,15 +5,17 @@ exports.submitContact = async (req, res) => {
     const { email, message } = req.body;
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.titan.email',
+      port: 465,
+      secure: true,
       auth: {
-        user: 'dehinbonatt@gmail.com',
-        pass: 'fsgxwamusrohixdw'
+        user: 'info@shop-easy.live',
+        pass: 'PvYh?ffx9/8$QF3'
       }
     });
 
     const mailOptions = {
-      from: 'dehinbonatt@gmail.com',
+      from: 'info@shop-easy.live',
       to: 'dehinbonath@yahoo.com',
       subject: `New message from ${email}`,
       text: `Email: ${email}\nMessage: ${message}`
