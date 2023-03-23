@@ -5,12 +5,12 @@ exports.submitContact = async (req, res) => {
     const { email, message } = req.body;
 
     const transporter = nodemailer.createTransport({
-      host: 'smtp.titan.email',
-      port: 465,
-      secure: true,
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      secure: process.env.SMTP_SECURE,
       auth: {
-        user: 'info@shop-easy.live',
-        pass: 'PvYh?ffx9/8$QF3'
+        user: process.env.SMTP_USERNAME,
+        pass: process.env.SMTP_PASSWORD
       }
     });
 
