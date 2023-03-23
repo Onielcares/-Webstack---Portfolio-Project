@@ -1,8 +1,12 @@
 const nodemailer = require('nodemailer');
 
+const mailFrom = process.env.MAIL_FROM;
+const mailTo = process.env.MAIL_TO;
+const mailSubjectTemplate = process.env.MAIL_SUBJECT;
+
 exports.submitContact = async (req, res) => {
   try {
-    const { email, message } = req.body;
+    const mailSubject = `${mailSubjectTemplate} ${req.body.email}`;
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -15,10 +19,10 @@ exports.submitContact = async (req, res) => {
     });
 
     const mailOptions = {
-      from: 'info@shop-easy.live',
-      to: 'dehinbonath@yahoo.com',
-      subject: `New message from ${email}`,
-      text: `Email: ${email}\nMessage: ${message}`
+      from: mailFrom,
+      to: mailTo,
+      subject: mailSubject,
+      text: `Email: ${req.body.email}\nMessage: ${req.body.message}`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
