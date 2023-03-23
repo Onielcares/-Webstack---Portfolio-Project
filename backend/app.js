@@ -3,6 +3,7 @@ const cors = require('cors');
 const categoryRouter = require('./routes/categoryRoute');
 const productRouter = require('./routes/productRoute');
 const storeRouter = require('./routes/storeRoute');
+const contactRouter = require('./routes/contactRoute');
 
 const app = express();
 
@@ -17,5 +18,6 @@ app.get('/', (req, res) => {
 app.use('/api/v1/categories', categoryRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/stores', storeRouter);
+app.use('/api/v1/contacts', contactRouter);
 
 module.exports = app;
