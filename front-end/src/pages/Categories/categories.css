@@ -1,7 +1,7 @@
 .category_container {
-    background: var(--beige);
+    /* background: var(--beige); */
     /*url(../../assets/CategoriesPage.png) you can also put in the background image in this element*/
-    min-height: 90vh;
+    /* min-height: 90vh; */
     background-image: url(../../assets/CategoriesPage.png);
     background-position-y: 100%;
     /* this implies that the image will be placed from top to buttom vertically*/
@@ -40,35 +40,34 @@
 }
 
 .category_link {
-    background: var(--beige);
+    background: white;
     color: var(--purple);
     padding: .2rem .9rem;
     border-radius: 20px;
-}
-
-.search_form {
-    border-radius: 10px;
-    overflow: hidden;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .search_input {
-    width: 300px;
+    width: 100%;
     padding: .3rem 1rem;
     outline: none;
+    border: 1px solid;
+    border-radius: 10px 0 0 10px;
 }
 
 .search_btn {
     padding: .3rem 1rem;
-    background: var(--purple);
+    /* background-color: var(--purple); */
     color: var(--white);
+    border: 1px solid var(--purple);
     border-radius: 0 10px 10px 0;
 }
 
 .product_c {
-    /* width: 80%; */
-    padding: 2rem 0 0 10rem;
+    padding: 2rem 2rem 2rem 10rem;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
 }
 
@@ -88,6 +87,6 @@
 @media (max-width : 500px) {
     .product_c {
         width: 100%;
-        
+
     }
 }

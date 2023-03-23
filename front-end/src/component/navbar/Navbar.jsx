@@ -9,7 +9,7 @@ const Navbar = () => {
       <nav className="flex gap-3 nav_container md:h-16">
         <Link to='/'><div className="flex flex-col md:flex-row justify-center items-center gap-2">
           <img src={logo} alt='project logo' className='w-10' />
-          <h1 className="logo">EASY SHOP</h1>
+          <h1 className="logo md:w-10">Shop Easy</h1>
         </div></Link>
         <ul className="flex flex-wrap justify-center font-medium sm:justify-start nav-ul">
           <NavLink to='/'><li className="nav-link">Home</li></NavLink>

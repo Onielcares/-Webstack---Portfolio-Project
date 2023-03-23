@@ -1,5 +1,5 @@
 .about_section {
-    background: var(--beige);
+    /* background: var(--beige); */
     place-items: center;
 }
 
@@ -8,9 +8,9 @@
     /* grid-template-columns: repeat(2, 1fr); */
     /* spliting the section into two equal parts or 1fr 1fr here 2 means it repeats twice it can be 3 times of one fraction(1fr)*/
     place-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     padding: 1.5rem;
-    gap: 20px;
+    gap: 30px;
     text-align: justify;
 }
 

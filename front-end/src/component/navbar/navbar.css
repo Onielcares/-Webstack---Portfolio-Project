@@ -8,7 +8,8 @@
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .nav-ul {
@@ -21,7 +22,7 @@
 }
 
 .active {
-    background-color: var(--beige);
+    background-color: white;
     border-radius: 20px;
     color: var(--purple)
 }
