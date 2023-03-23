@@ -6,7 +6,9 @@ export default function Card(props) {
   const [show, setShow] = useState(false);
 
   return (
-    <div className={`w-52 relative `}>
+    <div
+      className={`w-52 relative shadow-xl hover:shadow-2xl rounded-lg border-t border-purple border-opacity-10 `}
+    >
       <div className="h-36 rounded-t-lg">
         <img
           src={props.src}
@@ -34,7 +36,9 @@ export default function Card(props) {
 
         <div>
           <p className="font-medium text-lg">Stores</p>
-          <div className="flex gap-2 text-purple flex-wrap justify-center">{props.store}</div>
+          <div className="flex gap-2 text-purple flex-wrap justify-center">
+            {props.store}
+          </div>
         </div>
       </div>
     </div>
