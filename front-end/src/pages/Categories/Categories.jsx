@@ -65,10 +65,17 @@ const Categories = () => {
               .map((item, idx) => (
                 <Card
                   key={idx}
-                  product={item.name}
-                  alt={item.name}
-                  category={item.categories}
-                  store={item.stores}
+                  product={item.product}
+                  alt={item.product}
+                  src={item.imageUrl}
+                  category={item.categories[1].name}
+                  store={item.stores.map((item, idx) => (
+                    <p key={idx}>
+                      <a href={item.url} target="_blank">
+                        | {item.name}
+                      </a>
+                    </p>
+                  ))}
                 />
               ))}
         </div>
