@@ -15,5 +15,6 @@ router
 router.get('/base', categoryController.getCategoriesWithoutParent);
 router.get('/children/:parentId', categoryController.getCategoriesWithChildren);
 router.post('/search/:id', categoryController.searchProductInCategory);
+router.get('/:id/products', categoryController.getProductInCategory);
 
 module.exports = router;

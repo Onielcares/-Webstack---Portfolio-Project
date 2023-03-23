@@ -180,3 +180,50 @@ exports.searchProductInCategory = async (req, res) => {
     });
   }
 };
+
+exports.getProductInCategory = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const searchProducts = await Product.find({
+      categories: id
+    })
+      .populate('categories')
+      .populate('stores');
+
+    if (!searchProducts.length) {
+      return res.status(404).json({
+        status: 'error',
+        code: 404,
+        message: 'Product not found'
+      });
+    }
+
+    const data = searchProducts.map(product => ({
+      _id: product._id,
+      product: product.name,
+      imageUrl: product.imageUrl,
+      categories: product.categories.map(category => ({
+        _id: category._id,
+        name: category.name
+      })),
+      stores: product.stores.map(store => ({
+        _id: store._id,
+        name: store.name,
+        url: store.url
+      }))
+    }));
+
+    return res.status(200).json({
+      status: 'Success',
+      code: 200,
+      data
+    });
+  } catch {
+    return res.status(500).json({
+      status: 'error',
+      code: 500,
+      message: 'Unable to search product!'
+    });
+  }
+};
