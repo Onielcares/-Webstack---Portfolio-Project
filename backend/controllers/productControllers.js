@@ -110,10 +110,10 @@ exports.searchProduct = async (req, res) => {
       .populate('stores');
 
     if (!searchProducts.length) {
-      return res.status(404).json({
-        status: 'error',
-        code: 404,
-        message: 'Product not found'
+      return res.status(200).json({
+        status: 'Success',
+        code: 200,
+        data: []
       });
     }
 
