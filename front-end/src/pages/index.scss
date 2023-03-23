@@ -1,12 +1,13 @@
-.landingImg{
-    background-image: url('../assets/landingBackground.png'), linear-gradient( #FFECB9 50%, #3F1859 50%);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.landingImg {
+  background-image: url("../assets/landingBackground.png"),
+    linear-gradient(#ffffff 50%, #3f1859 50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-@media (max-width: 768px){
-    // .landingImg{
-    //     background-image: url('../assets/landingBackground.png'), linear-gradient( #FFECB9 10%, #3F1859 90%);
-    // }
+@media (max-width: 768px) {
+  // .landingImg{
+  //     background-image: url('../assets/landingBackground.png'), linear-gradient( #FFECB9 10%, #3F1859 90%);
+  // }
 }

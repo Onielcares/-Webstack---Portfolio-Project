@@ -48,7 +48,7 @@ const LandingPage = () => {
             meant to be”
           </p>
         </div>
-        <div className="flex flex-wrap justify-center items-center gap-5">
+        <div className="flex flex-wrap justify-center items-center gap-10">
           {products &&
             [...products]
               .sort(() => 0.5 - Math.random())
@@ -84,22 +84,27 @@ const LandingPage = () => {
             </p>
           </div>
           <div className="flex flex-col gap-10 ">
-            <p className="bg-white rounded-3xl text-purple text-lg md:text-2xl p-3 ">
-              "Shop Easy has completely changed the way I shop. As a busy
-              working mom, I don't have the time to go from store to store, so
-              being able to find everything I need in one place is a lifesaver.
-              I love the variety of options available, and the platform is so
-              easy to use."
-            </p>
-            <p className="text-right italic text-sm md:text-lg">- Miracle</p>
-            <p className="bg-white rounded-3xl text-purple text-lg md:text-2xl p-3">
-              "Shop Easy is the perfect solution for anyone who wants to shop
-              from the comfort of their own home. The platform is user-friendly,
-              and the selection of products is fantastic. I've found everything
-              I need on Shop Easy, and I've recommended it to all of my
-              friends."
-            </p>
-            <p className="text-right italic text-sm md:text-lg">- John</p>
+            <div className="bg-white rounded-3xl text-purple p-3">
+              <p className=" text-lg md:text-2xl ">
+                "Shop Easy has completely changed the way I shop. As a busy
+                working mom, I don't have the time to go from store to store, so
+                being able to find everything I need in one place is a lifesaver.
+                I love the variety of options available, and the platform is so
+                easy to use."
+              </p>
+              <p className="text-right italic text-sm md:text-lg">- Miracle</p>
+            </div>
+
+            <div className="bg-white rounded-3xl text-purple p-3">
+              <p className="bg-white rounded-3xl text-purple text-lg md:text-2xl p-3">
+                "Shop Easy is the perfect solution for anyone who wants to shop
+                from the comfort of their own home. The platform is user-friendly,
+                and the selection of products is fantastic. I've found everything
+                I need on Shop Easy, and I've recommended it to all of my
+                friends."
+              </p>
+              <p className="text-right italic text-sm md:text-lg">- John</p>
+            </div>
           </div>
         </div>
         {/* <div className="flex flex-col justify-center items-center gap-5 pt-3 pb-10">
@@ -123,7 +128,7 @@ const LandingPage = () => {
         </div> */}
 
         <div className="md:h-[710px] flex justify-center items-center text-white mb-14 md:mb-0">
-          <ul className="flex flex-wrap justify-center items-end gap-5 md:gap-10 md:border-b md:mt-44 md:px-32 pb-32 md:pb-14">
+          <ul className="flex flex-wrap justify-center items-end gap-5 md:gap-10 md:border-b md:mt-14 md:px-32 pb-32 md:pb-14">
             <Link to="/categories">
               <li className="font-bold">Categories</li>
             </Link>
