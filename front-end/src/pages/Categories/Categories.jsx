@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "../../component/card/card";
 import "./categories.css";
 import axios from "axios";
+import { DotLoader } from "react-spinners";
 
 const Categories = () => {
   const [category, setCategory] = useState();
@@ -78,7 +79,8 @@ const Categories = () => {
           </ul>
         </div>
 
-        <form onSubmit={handleSubmit} className="md:w-[40%] lg:[20%] flex">
+        <div className="flex justify-end sm:mr-16">
+        <form onSubmit={handleSubmit} className="md:w-[40%] mt-5 lg:w-[25%] flex">
           <input
             type="text"
             name="name"
@@ -90,43 +92,65 @@ const Categories = () => {
           />
           <button
             type="submit"
-            className="search_btn bg-purple"
+            className={`search_btn bg-purple disabled:opacity-80`}
             onClick={handleSubmit}
+            disabled={search.name ? false : true}
           >
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
+        </div>
       </div>
 
-      <div className="flex flex-col gap-6 justify-center 2xl:w-[80%] items-center m-auto">
-        <div className="flex product_c">
-          {products &&
-            [...products]
-              .sort(() => 0.5 - Math.random())
-              .slice(0, show ? products.length : 20)
-              .map((item, idx) => (
-                <Card
-                  key={idx}
-                  product={item.product}
-                  alt={item.product}
-                  src={item.imageUrl}
-                  category={item.categories[1].name}
-                  store={item.stores.map((item, idx) => (
-                    <p key={idx}>
-                      <a href={item.url} target="_blank">
-                        | {item.name}
-                      </a>
-                    </p>
-                  ))}
-                />
-              ))}
+      <div className="flex flex-col gap-6 justify-center items-center m-auto">
+        <div>
+          {products ? (
+            <div>
+              {products.length !== 0 ? (
+                <div>
+                  <div className="flex product_c">
+                    {[...products]
+                      .sort(() => 0.5 - Math.random())
+                      .slice(0, show ? products.length : 20)
+                      .map((item, idx) => (
+                        <Card
+                          key={idx}
+                          product={item.product}
+                          alt={item.product}
+                          src={item.imageUrl}
+                          category={item.categories[1].name}
+                          store={item.stores.map((item, idx) => (
+                            <p key={idx}>
+                              <a href={item.url} target="_blank">
+                                | {item.name}
+                              </a>
+                            </p>
+                          ))}
+                        />
+                      ))}
+                  </div>
+                  <p
+                    className="text-xl text-purple opacity-80 font-black text-center cursor-pointer pb-10 hover:opacity-100"
+                    onClick={() => setShow(!show)}
+                  >
+                    {show ? "Show less" : "Show more"}
+                  </p>
+                </div>
+              ) : (
+                "No results found"
+              )}
+            </div>
+          ) : (
+            <div className="h-[25rem] flex justify-center items-center">
+              <DotLoader
+                color="#3F1859"
+                loading={!products}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+              />
+            </div>
+          )}
         </div>
-        <p
-          className="text-xl text-purple opacity-80 font-black md:pl-40 cursor-pointer pb-10 hover:opacity-100"
-          onClick={() => setShow(!show)}
-        >
-          {show ? "Show less" : "Show more"}
-        </p>
       </div>
     </div>
   );
