@@ -131,7 +131,7 @@ const LandingPage = () => {
           </form>
         </div>
 
-        <div className="md:h-[550px] flex justify-center items-center text-white mb-14 md:mb-0 border">
+        <div className="md:h-[550px] flex justify-center items-center text-white mb-14 md:mb-0">
           <ul className="flex flex-wrap justify-center items-end gap-5 md:gap-10 md:border-b md:px-32 pb-32 md:pb-10">
             <Link to="/categories">
               <li className="font-bold">Categories</li>
