@@ -72,38 +72,40 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <footer className="">
+      <footer>
         <div className="flex flex-col justify-center items-center gap-5 pt-3 pb-10 md:max-w-4xl m-auto mt-14">
           <div className="text-center">
             <h2 className="font-medium text-2xl md:text-4xl text-white">
               Testimonials
             </h2>
-            <p className="mt-2 mb-14 text-white">
+            <p className="mt-2 mb-5 text-white">
               Don't just take our word for it, here are some testimonials from
               our satisfied customers.
             </p>
           </div>
           <div className="flex flex-col gap-10 ">
-            <div className="bg-white rounded-3xl text-purple p-3">
-              <p className=" text-lg md:text-2xl ">
+            <div className="bg-white rounded-3xl text-purple px-7 py-5">
+              <p className=" md:text-lg ">
                 "Shop Easy has completely changed the way I shop. As a busy
                 working mom, I don't have the time to go from store to store, so
                 being able to find everything I need in one place is a lifesaver.
                 I love the variety of options available, and the platform is so
                 easy to use."
               </p>
-              <p className="text-right italic text-sm md:text-lg">- Miracle</p>
+              <p className="text-right italic text-sm md:text-md">- Miracle</p>
             </div>
 
-            <div className="bg-white rounded-3xl text-purple p-3">
-              <p className="bg-white rounded-3xl text-purple text-lg md:text-2xl p-3">
-                "Shop Easy is the perfect solution for anyone who wants to shop
-                from the comfort of their own home. The platform is user-friendly,
-                and the selection of products is fantastic. I've found everything
-                I need on Shop Easy, and I've recommended it to all of my
-                friends."
-              </p>
-              <p className="text-right italic text-sm md:text-lg">- John</p>
+            <div className="flex flex-col gap-10">
+              <div className="bg-white rounded-3xl text-purple px-7 py-5">
+                <p className="md:text-lg">
+                  "Shop Easy is the perfect solution for anyone who wants to shop
+                  from the comfort of their own home. The platform is user-friendly,
+                  and the selection of products is fantastic. I've found everything
+                  I need on Shop Easy, and I've recommended it to all of my
+                  friends."
+                </p>
+                <p className="text-right italic text-sm md:text-md">- John</p>
+              </div>
             </div>
           </div>
         </div>

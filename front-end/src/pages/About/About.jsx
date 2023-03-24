@@ -7,7 +7,7 @@ const About = () => {
       <div className="grid about_section_cont">
         <div className="flex about_sub_section ">
           <h2 className="font-bold text-3xl">About Us</h2>
-          <p className="sent">
+          <p className="sent shadow-lg p-5 rounded-lg border-t border-purple border-opacity-10 mb-5">
             Shop Easy is an innovative web application that is designed to make
             your shopping experience easier and more convenient than ever
             before. With a wide range of products and stores to choose from,
@@ -19,21 +19,13 @@ const About = () => {
             someone who just doesn't have the time to go out and search for what
             you need, Shop Easy is here to help.
           </p>
-
-          <p className="sent_me">
-            Our user-friendly platform offers a wide range of options and
-            filters to help you find exactly what you're looking for, whether
-            it's clothing, electronics, household items, or anything else. With
-            Shop Easy, you can browse through a variety of products, compare
-            prices and make informed buying decisions without any hassle.
-          </p>
           <div className="flex protractor">
             <span className="circle"></span>
             <p>Development Team</p>
           </div>
         </div>
-        <div className="hidden md:block ">
-          <img src={About_img} alt="" className="about_img" />
+        <div className="hidden md:block pt-14">
+          <img src={About_img} alt="about illustration" className="w-full" />
         </div>
       </div>
 

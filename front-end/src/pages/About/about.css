@@ -1,5 +1,4 @@
 .about_section {
-    /* background: var(--beige); */
     place-items: center;
 }
 
@@ -8,15 +7,14 @@
     /* grid-template-columns: repeat(2, 1fr); */
     /* spliting the section into two equal parts or 1fr 1fr here 2 means it repeats twice it can be 3 times of one fraction(1fr)*/
     place-items: center;
-    max-width: 1400px;
-    padding: 1.5rem;
+    padding: 1rem 10rem 1rem 7rem;
     gap: 30px;
     text-align: justify;
 }
 
 .about_sub_section {
     flex-direction: column;
-    gap: 40px;
+    gap: 15px;
 }
 
 .sent {
@@ -47,8 +45,7 @@
 @media(max-width: 768px) {
     .about_section_cont {
         grid-template-columns: 100% 0%;
-        padding: 1.5rem;
-        height: max-content;
+        /* padding: 1.5rem; */
         text-align: center;
     }
     .protractor {
