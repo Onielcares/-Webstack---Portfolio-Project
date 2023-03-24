@@ -109,28 +109,30 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        {/* <div className="flex flex-col justify-center items-center gap-5 pt-3 pb-10">
-          <h2 className="font-medium text-2xl md:text-4xl text-white">
+
+        <div className="flex flex-col justify-end items-end gap-5 pt-10 pr-10">
+          <h2 className="font-medium text-lg md:text-2xl text-white">
             Contact Us
           </h2>
           <form className="flex flex-col gap-5 md:w-96">
             <input
               type="text"
               placeholder="Email"
-              className="bg-white py-2 px-3 rounded-lg"
+              className="bg-white py-2 px-3 rounded-lg outline-none"
             />
-            <textarea rows={4} className="rounded-lg" />
+            <textarea rows={3} className="rounded-lg py-2 px-3 outline-none" placeholder='Write your message' />
             <button
               type="submit"
+              disabled={true}
               className="bg-beige text-purple font-medium py-2 px-10 rounded-lg"
             >
               Contact Us
             </button>
           </form>
-        </div> */}
+        </div>
 
-        <div className="md:h-[710px] flex justify-center items-center text-white mb-14 md:mb-0">
-          <ul className="flex flex-wrap justify-center items-end gap-5 md:gap-10 md:border-b md:mt-14 md:px-32 pb-32 md:pb-14">
+        <div className="md:h-[550px] flex justify-center items-center text-white mb-14 md:mb-0 border">
+          <ul className="flex flex-wrap justify-center items-end gap-5 md:gap-10 md:border-b md:px-32 pb-32 md:pb-10">
             <Link to="/categories">
               <li className="font-bold">Categories</li>
             </Link>
